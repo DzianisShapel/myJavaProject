@@ -10,7 +10,7 @@ package org.andersen.lab.lesson_2;
 public class Task_1 {
 
     public static void main(String[] args) {
-        System.out.println(sumIsBetweenTenAndTwenty(10,19));
+        System.out.println(sumIsBetweenTenAndTwenty(10, 19));
     }
 
     public static Boolean sumIsBetweenTenAndTwenty(int a, int b) {
