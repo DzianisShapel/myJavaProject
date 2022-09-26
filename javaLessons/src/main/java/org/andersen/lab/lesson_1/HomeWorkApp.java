@@ -1,4 +1,4 @@
-package org.andersen.lab.lesson1;
+package org.andersen.lab.lesson_1;
 
 
 public class HomeWorkApp {
