@@ -25,9 +25,9 @@ public class AppData {
         return data;
     }
 
-    public void save() throws IOException {
+    public void save(File file) throws IOException {
 
-        FileWriter csvWriter = new FileWriter("homework7.csv");
+        FileWriter csvWriter = new FileWriter(file);
 
         for (int i = 0; i < getHeader().length; i++) {
             csvWriter.append(getHeader()[i]);
@@ -74,9 +74,9 @@ public class AppData {
     }
 
     //method for reading 2
-    public void read() throws IOException {
+    public void read(File file) throws IOException {
         try {
-            BufferedReader csvReader = new BufferedReader(new FileReader("homework7.csv"));
+            BufferedReader csvReader = new BufferedReader(new FileReader(file));
             String row;
             while ((row = csvReader.readLine()) != null) {
                 String[] data = row.split(",");
@@ -84,7 +84,7 @@ public class AppData {
             }
             csvReader.close();
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            System.out.println("File does not exist!");
         }
 
     }
